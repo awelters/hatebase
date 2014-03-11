@@ -9,18 +9,18 @@ Simple PHP wrapper for v3.0 of the [hatebase.org API](http://www.hatebase.org/co
 2. Install [composer](https://getcomposer.org/doc/00-intro.md)
 3. Create a new composer.json file with awelters/hatebase as a dependency (or add to your project's existing composer.json file)
 
-`
+```
 {
     "require": {
     	"awelters/hatebase": "dev-master"
     }
 }
-`
+```
 
 4. Use composer to [install the dependencies](https://getcomposer.org/doc/00-intro.md#using-composer)
 5. Create the following php script and add your Hatebase API key
 
-`
+```
 <?php
 /**
 * Andrew's Hatebase script : Simple script to retrieve results from Hatebase API
@@ -59,4 +59,4 @@ try {
 catch(Exception $e) {
 	echo 'Error: '.$e;
 }
-`
+```
