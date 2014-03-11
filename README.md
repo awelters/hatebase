@@ -6,7 +6,7 @@ Simple PHP wrapper for v3.0 of the [hatebase.org API](http://www.hatebase.org/co
 # How to use
 
 1. Obtain a [hatebase API key](http://www.hatebase.org/request_api)
-2. Install (composer)[https://getcomposer.org/doc/00-intro.md]
+2. Install [composer](https://getcomposer.org/doc/00-intro.md)
 3. Create a new composer.json file with awelters/hatebase as a dependency (or add to your project's existing composer.json file)
 
 `
