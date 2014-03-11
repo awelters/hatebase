@@ -39,8 +39,6 @@ require_once __DIR__ . '/vendor/autoload.php'; // Autoload files using Composer 
 
 use Hatebase\HatebaseAPI;
 
-date_default_timezone_set('America/Chicago');
-
 $settings = array(
     'key' => '',
     'version' => '3' //optional
@@ -49,7 +47,7 @@ $hatebase = new HatebaseAPI($settings);
 
 //See http://www.hatebase.org/connect_api for filter options
 $filters = array('about_nationality' => '1', 'language' => 'eng');
-$output = 'xml'; //either 'xml' or 'json', 'xml' is faster
+$output = 'json'; //either 'xml' or 'json', 'xml' is faster
 $query_type = 'sightings'; //either 'vocabulary' or 'sightings'
 
 try {
