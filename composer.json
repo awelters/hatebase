@@ -1,0 +1,27 @@
+{
+    "name": "awelters/hatebase",
+    "type": "library",
+    "description": "Hatebase is a PHP HTTP client library for consuming the Hatebase API",
+    "keywords": ["hatebase", "api", "curl"],
+    "homepage": "https://github.com/awelters/hatebase",
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Andrew Welters",
+            "email": "awelters@hugmehugyou.org",
+            "homepage": "https://github.com/awelters"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.3.3",
+        "ext-curl": "*"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Hatebase": "src/"
+        }
+    }
+}
