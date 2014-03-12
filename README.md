@@ -18,7 +18,7 @@ Simple PHP wrapper for v3.0 of the [hatebase.org API](http://www.hatebase.org/co
 ```
 
 4. Use composer to [install the dependencies](https://getcomposer.org/doc/00-intro.md#using-composer)
-5. Create the following php script and add your Hatebase API key
+5. Go ahead and try it out.  The following php script can be used as a starting point by simply adding your Hatebase API key
 
 ```
 <?php
