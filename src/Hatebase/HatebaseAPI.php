@@ -18,7 +18,7 @@ namespace Hatebase;
 */
 class HatebaseAPI
 {
-	private $base_url = 'http://api.hatebase.org';
+	private $base_url = 'https://api.hatebase.org';
 	private $version = '3';
     private $key;
 
@@ -38,7 +38,7 @@ class HatebaseAPI
         {
             throw new Exception('You need to install cURL, see: http://curl.haxx.se/docs/install.html');
         }
-        
+
         if (!isset($settings['key']))
         {
             throw new Exception('Make sure you are passing in the correct parameters');
@@ -46,9 +46,9 @@ class HatebaseAPI
 
         $this->key = $settings['key'];
         if(isset($settings['version']))
-        	$this->version = $settings['version']; 
+        	$this->version = $settings['version'];
     }
-    
+
     /**
 	* Perform the actual data retrieval from the API
 	*
@@ -61,7 +61,7 @@ class HatebaseAPI
     public function performRequest($filters, $output = 'xml', $query_type = 'vocabulary')
     {
     	$url = $this->base_url . '/v' . $this->version . '-0/' . $this->key . '/' . $query_type . '/' . $output . '/' . $this->format_query($filters);
-    	
+
         $options = array(
             CURLOPT_HEADER => false,
             CURLOPT_URL => $url,
@@ -69,7 +69,7 @@ class HatebaseAPI
             CURLOPT_CONNECTTIMEOUT => 0, //The number of seconds to wait while trying to connect. Use 0 to wait indefinitely.
             CURLOPT_TIMEOUT => 120//The maximum number of seconds to allow cURL functions to execute.
         );
-        
+
 		$curl_handle = curl_init();
         curl_setopt_array($curl_handle, $options);
         $result = curl_exec($curl_handle);
@@ -78,10 +78,10 @@ class HatebaseAPI
 
 		if($error != '')
 			throw new Exception($error);
-			
+
         return $result;
     }
-    
+
     public function format_query($parameters, $primary='%3D', $secondary='%7C'){
         $query = "";
         foreach($parameters as $key => $value){
